@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+:root{
+    --primaryColor : rgb(87, 193, 255);
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(236, 236, 236);
+}
+.logo{
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    left: 1em;
+}
+
+.logout{
+    width: 70px;
+    height: 30px;
+    border-radius: 15px;
+    border: 3px solid var(--primaryColor);
+    background-color: white;
+    font-weight: 500;
+    font-size: 12px;
+    transition: fill 0.2s ease-in-out;
+    outline: none;
+}
+
+.logout:hover{
+    background-color: var(--primaryColor);
+    color: white;
+}
+
+.logout:active{
+    background-color: var(--primaryColor);
+}
+
+.hamburger{
+    width: 50px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.hamburger label {
+    width: 45px;
+    height: 4px;
+    background-color: black;
+    position: absolute;
+
+}
+
+
+.hamburger label::before, label::after{
+        content: '';
+        width: 45px;
+        height: 4px;
+        background-color: black;
+        position: absolute;
+        display: block;
+}
+.hamburger label::before{
+    top: -12px;
+    transform-origin: left top;
+}
+.hamburger label::after{
+    bottom: -12px;
+    transform-origin: left bottom;
+}
+
+#toggle:checked ~ label{
+    background-color: white;
+}
+
+#toggle:checked ~ label::after{
+    transform: rotateZ(-35deg);
+}
+#toggle:checked ~ label::before{
+    transform: rotateZ(35deg);
+}
+
+#toggle{
+    display: none;
+}
+
+nav{
+    width: 80%;
+    height: 10vh;
+    margin: auto;
+    padding: 1em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    opacity: 100%;
+    z-index: 1;
+    box-sizing: border-box;
+}
+nav ul{
+    width: 30%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    align-self: center;
+}
+
+main{
+    width: 80%;
+    margin: auto;
+    margin-top: 3em;
+    position: relative;
+}
+@media only screen and (max-width:700px){
+    nav{
+        width: 100%;
+    }
+    main{
+        width: 99%;
+    }
+    .hamburger{
+        display: none;
+    }
+}

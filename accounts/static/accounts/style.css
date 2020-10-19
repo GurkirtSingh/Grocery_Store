@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-text{
+    position: absolute;
+    color: darkred;
+    left: 10px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    width: 26em;
+    height: 35em;
+
+    margin-top: 3em;
+
+    border: 0.5px solid rgb(156, 156, 156);
+}
+
+.logo{
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: 400;
+
+    margin-top: 2em;
+}
+
+.input-box{
+    width: 100%;
+    height: 2.5em;
+    
+    box-sizing: border-box;
+    margin-top: 23px;
+
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: border 0.2s ease-in-out;
+}
+
+form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.input-box:focus{
+    outline: none;
+    border: 1px solid #56A6DF;
+}
+
+.container form{
+    width: 70%;
+}
+
+.container form > input{
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.button{
+    border: 0px;
+    
+}
+.primary{
+    background-color: #68A76E;
+    color: white;
+    width: 100%;
+}
+.primary:hover{
+    background-color: rgb(74, 119, 78);
+}
+
+.secondary{
+    background-color: #B4C1B6;
+    color: black;
+    width: 70%;
+}
+
+.login-link{
+    font-size: 14px;
+    margin-top: 8px;
+
+}
+
+.loginSignupSeperator{
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 70%;
+    justify-content: center;
+}
+.textSeperator{
+    background-color: white;
+    position: absolute;
+    left: 45%;
+    top: 0;
+    width: 2em;
+    justify-content: center;
+    background-color: #68A76E;
+    justify-content: center;
+}
+hr{
+    border-top: 2px solid #bbb;
+}
+
+.alink{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.alink:hover{
+    background-color: gray;
+}
+

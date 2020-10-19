@@ -1,0 +1,30 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-box">
+    <div class="category">
+        <div class="category-title category-size">All Departments</div>
+        {% for item in sections %}
+            <div class="category-item category-size">
+                <span>{{ item.name }}</span>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="showcase">
+        {% for item in products %}
+        <div class="item drop-shadow" data-productid="{{ item.id }}">
+            <button id="addToCartButton" class="update-cart" data-id="{{ item.id }}">
+            </button>
+            <img src="{% static 'store/images/background.jpg' %}"/>
+            <div class="about-item">
+                <span>${{ item.price }}</span>
+                <span>{{ item.name }}</span>
+                <span>${{ item.priceRate }}</span>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+    
+{% endblock %}

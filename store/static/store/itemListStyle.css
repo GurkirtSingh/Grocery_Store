@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-box{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+.category{
+    flex: 1;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+.category-size{
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.category-item{
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+.category-item:hover{
+    background-color:#68A76E;
+    color: white;
+}
+.category-title{
+    display: flex;
+    justify-content: center;
+    background: White;
+}
+.showcase{
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+.item{
+    display: inline-block;
+    position: relative;
+    margin: 0.5em 0.5em 0.5em 0.5em;
+    width: 150px;
+    height: 200px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-in-out;
+}
+.item img{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    top: 0em;
+}
+.item:hover{
+    box-shadow: 1px 1px 7px -1px black;
+}
+.about-item{
+    background-color: white;
+    width: 90%;
+    height: 30%;
+    position: absolute;
+    bottom: 0em;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    justify-content: flex-end;
+}
+
+.drop-shadow{
+
+    box-shadow: 1px 1px 7px -5px black;
+}
+.update-cart{
+    width: 1em;
+    height: 1em;
+    background-color: #68A76E;
+    position: absolute;
+    z-index: 1;
+    font-size: 28px;
+    right: -0.3em;
+    top: -0.3em;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+}
+.is-active{
+    background-color: rgb(187, 186, 113);
+}
+
+@media only screen and (max-width:700px){
+    .category{
+        display: none;
+    }
+    .container-box{
+        width: 100%;
+    }
+    .showcase{
+        width: 100%;
+        padding: 0em 0.5em 0em 0.5em;
+        box-sizing: border-box;
+        justify-content: space-between;
+    }
+    
+    .item{
+        width: 150px;
+        height: 200px;
+    }
+}

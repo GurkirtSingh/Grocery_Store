@@ -1,0 +1,15 @@
+{% extends 'store/base.html' %}
+{% block content %}
+<div class="intro-section">
+    <h1>Welcome</h1>
+    <h1>to your grocery store</h1>
+</div>
+<div class="list-section">
+{% for item in departments %}
+    <a href="{% url 'productsByDepartment' department=item.name %}" class="department drop-shadow">
+        <img src="{{ item.image.url }}"/>
+        <span class="department-name">{{ item.name }}</span>
+    </a>
+{% endfor %}
+</div>
+{% endblock %}

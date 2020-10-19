@@ -1,0 +1,46 @@
+{% extends 'store/base.html' %}
+{% block content %}
+    <div class="cart-container1">
+        <div class="cart-list-container1">
+            <div class="cart-item1">
+                <img/>
+                <div class="cart-item-detail1">
+                    <span class="cart-item-title1">Banana</span>
+                    <span class="cart-item-title2">At $1.29 pkg</span>
+                    <div class="cart-item-updateCart">
+                        <button id="de-increament-btn" ></button>
+                        <input id="quantity-input" type="number" autocomplete="off" value="1" />
+                        <button id="increament-btn"></button>
+                    </div>
+                </div>
+                <div class="cart-item-total1">
+                    <span>$2.09</span>
+                </div>
+                <div class="cart-item-delete1">
+                    <span>D</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="cart-info-container1">
+            <h2>Order Summary</h2>
+            <div class="cart-info-subtotal">
+                <span>Sub Total</span>
+                <span>$39.00</span>
+            </div>
+            <div class="cart-info-hst">
+                <span>HST 13%</span>
+                <span>$0.00</span>
+            </div>
+            <div class="cart-info-total">
+                <span>TOTAL</span>
+                <span>$39.00</span>
+            </div>
+            <button class="checkout-btn">
+                <span>Proceed To Checkout</span>
+            </button>
+
+        </div>
+
+    </div>
+{% endblock %}

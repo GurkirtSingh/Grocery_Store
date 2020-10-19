@@ -1,0 +1,24 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="detail-container">
+        <img class="detail-item-img" src="{{ product.image.url }}"/>
+        <div class="detail-item">
+            <span class="detail-name">{{ product.name }}</span>
+            <span class="detail-price">${{ product.price }}</span>
+            <div class="item-links">
+                <button>Favorit</button>
+                <button>Share</button>
+            </div>
+            <div class="cart-container">
+                <div class="cart-quantity-adjust">
+                    <button id="cart-button-down" class="cart-quantity-down">-</button>
+                    <input id="cart-input" class="cart-quantity-input" type="number" autocomplete="off" value="{{ quantInCart }}"/>
+                    <button id="cart-button-up" cass="cart-quantity-up">+</button>
+                </div>
+                <button id="addToCart" data-id="{{ product.id }}" class="cart-add-button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="extra-container"></div>
+{% endblock %}

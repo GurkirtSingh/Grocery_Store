@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Grocery store</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'store/style.css' %}">
+        <link rel="stylesheet" href="{% static 'store/baseStyle.css' %}">
+        <link rel="stylesheet" href="{% static 'store/itemDetail.css' %}">
+        <link rel="stylesheet" href="{% static 'store/itemListStyle.css' %}">
+        <link rel="stylesheet" href="{% static 'store/cartDetailsStyle.css' %}">
+    </head>
+    <body>
+        <nav>
+            <a href="{% url 'storeHome' %}" class="logo">Grocery</a>
+            <ul>
+                <li>
+                    <a href="{% url 'cart' %}" >Cart</a>
+                </li>
+                <li>
+                    <button class="logout" id="logout">Logout</button>
+                </li>
+                <li>
+                    <div class="hamburger">
+                        <input type="checkbox" id="toggle"/>
+                        <label for="toggle"></label>
+                    </div>
+                </li>
+            </ul>
+            
+        </nav>
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+        <script src="{% static 'store/scripts/actions.js' %}" async defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.department{
+    display: flex;
+    flex-direction: column;
+    width: 155px;
+    height: 170px;
+    margin: 1em 1em 1em 1em;
+    text-decoration: none;
+    color: black;
+}
+
+.department img{
+    height: 70%;
+    background-color: #E2E2E2;
+}
+
+.department-name{
+    margin: 0.5em;
+    font-size: large;
+    align-self: flex-start;
+}
+
+.drop-shadow{
+    box-shadow: 1px 2px 6px -1px rgb(163, 163, 163);
+}
+
+main{
+    display: flex;
+}
+.intro-section{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.list-section{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width:1024px){
+
+    main{
+        margin-top: 1em;
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width:375px){
+
+    .department{
+        margin: 0.5em;
+    }
+}

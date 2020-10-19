@@ -1,0 +1,117 @@
+.detail-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.detail-item-img{
+    flex: 1;
+    max-width: 50%;
+}
+
+.detail-item{
+    margin-left: 40px;
+    max-width: 40%;
+    flex: 1;
+}
+
+.detail-name{
+    display: block;
+    font-size: 36px;
+    line-height: 41px;
+    letter-spacing: 0.1em;
+    color: #000000;
+    margin-bottom: 0.5em;
+}
+.detail-price{
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1em;
+    color: #000000;
+}
+
+.item-links{
+    display: flex;
+    justify-content: space-evenly;
+    height: 61px;
+    margin-top: 3em;
+}
+
+.item-links button{
+    display: inline-block;
+    width: 49%;
+    background: #FFFFFF;
+    border-radius: 30.5px;
+    border: none;
+    outline: none;
+    transition: background 0.2s ease-in-out;
+}
+.item-links button:active{
+    background: #6BD375;
+}
+
+.cart-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 44px;
+    margin-top: 3em;
+}
+.cart-container button{
+    height: 100%;
+    border: none;
+    
+}
+.cart-quantity-adjust{
+    display: flex;
+    justify-content: center;
+    width: 65%;
+    height: 100%;
+    background: #FFFFFF;
+}
+.cart-quantity-adjust button{
+    outline: none;
+    width: 15%;
+    font-size: large;
+    cursor: pointer;
+    background: #FFFFFF;
+    
+}
+.cart-quantity-input{
+    width: 70%;
+    height: 100%;;
+    text-align: center;
+    border: none;
+    background: #FFFFFF;
+    outline: none;
+}
+
+.cart-add-button{
+    background: #6BD375;
+    width: 30%;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    font-weight: bold;
+}
+.cart-add-button:active{
+    background-color: rgb(61, 119, 67);
+}
+
+@media only screen and (max-width:500px){
+    .detail-container{
+        flex-direction: column;
+        padding: 0em 0.5em 0em 0.5em;
+    }
+    .detail-item-img{
+        max-width: 100%;
+        max-height: 400px;
+    }
+    .detail-item{
+        max-width: 100%;
+        margin: 1em 0em 0em 0em;
+    }
+}
