@@ -51,12 +51,7 @@ def signupUser(request):
                 return render(request, 'account/signup.html', {'error': 'Invalid Fields'})
         else:
                 return render(request, 'account/signup.html', {'error': 'Password does not match'})
-
-        
-
     else:
         return render(request, 'accounts/signup.html')
-    
-
 def loginTrouble(request):
     return render(request, 'accounts/logintrouble.html')
